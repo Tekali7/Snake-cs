@@ -114,7 +114,8 @@ namespace Snake
                 {
                     Image image = new Image
                     {
-                        Source = Images.Empty
+                        Source = Images.Empty,
+                        RenderTransformOrigin = new Point(0.5, 0.5)
                     };
 
                     images[r, c] = image;
@@ -140,6 +141,7 @@ namespace Snake
                 {
                     GridValue gridVal = gameState.Grid[r, c];
                     gridImages[r, c].Source = gridValtoImage[gridVal];
+                    gridImages[r, c].RenderTransform = Transform.Identity;
                 }
             }
         }
